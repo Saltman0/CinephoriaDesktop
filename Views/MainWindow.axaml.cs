@@ -8,11 +8,11 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        ShowLoginView();
+        //ShowLoginView();
     }
     
-    private void ShowLoginView()
+    /*private void ShowLoginView()
     {
         Content = new LoginControl();
-    }
+    }*/
 }

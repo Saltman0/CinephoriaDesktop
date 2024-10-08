@@ -2,11 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="832"
-        Width="1280" Height="832"
+        xmlns:halls="clr-namespace:CinephoriaDesktop.Views.Hall"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="832" Width="1280" Height="832" CanResize="False"
         x:Class="CinephoriaDesktop.Views.MainWindow"
         Title="Cinéphoria Desktop">
         
-        
+        <halls:HallListControl></halls:HallListControl>
         
 </Window>
