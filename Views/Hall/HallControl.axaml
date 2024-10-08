@@ -1,0 +1,61 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="427" d:DesignHeight="366"
+             x:Class="CinephoriaDesktop.Views.Hall.HallControl" BorderThickness="2" BorderBrush="#F1C40F">
+    
+    <UserControl.Background>
+        <ImageBrush Source="../../Assets/Images/Avengers - Infinity War.png" Stretch="UniformToFill" />
+    </UserControl.Background>
+    
+    <Panel Margin="20">
+        
+        <Rectangle Width="423" Height="362" Fill="#1C1C1C" Opacity="0.9"/>
+        
+        <StackPanel Orientation="Vertical" Spacing="20" VerticalAlignment="Center">
+            
+            <TextBlock Theme="{StaticResource MainTitle}" Text="Salle 1" HorizontalAlignment="Center"/>
+            <TextBlock Theme="{StaticResource SubTitle}" Text="Avengers : Infinity War" 
+                       HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                
+                <Image Source="../../Assets/Images/Clock.png" Width="31" Height="31"></Image>
+                <TextBlock Theme="{StaticResource BigText}" Text="21h00 - 23h30" VerticalAlignment="Center"/>
+                
+            </StackPanel>
+            
+            <TextBlock Theme="{StaticResource Alert}" Text="1 incident en cours" HorizontalAlignment="Center"/>
+            
+            <Button Theme="{StaticResource ActionButton}"
+                    Width="280"
+                    HorizontalAlignment="Center"
+                    Click="DisplayIncidents">
+                
+                <Button.Content>
+                    <Grid RowDefinitions="*"
+                          ColumnDefinitions="30, 230">
+                        <Image Grid.Row="0"
+                               Grid.Column="0"
+                               Source="../../Assets/Images/Clipboard.png"
+                               Width="35"
+                               Height="35" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   Text="Afficher les incidents" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </Button.Content>
+                
+            </Button>
+            
+        </StackPanel>
+        
+    </Panel>
+    
+    
+    
+</UserControl>
