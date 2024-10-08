@@ -20,11 +20,8 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
         
-        <Button Grid.Row="0" 
-                Grid.Column="1"
-                Margin="0, 0, 10, 0"
-                Theme="{StaticResource ActionButton}"
-                Width="270">
+        <Button Grid.Row="0" Grid.Column="1" Theme="{StaticResource ActionButton}" Width="270" Click="ReportIncident"
+                Margin="0, 0, 10, 0">
             <Button.Content>
                 <Grid RowDefinitions="*"
                       ColumnDefinitions="50, 220">
@@ -44,10 +41,7 @@
             </Button.Content>
         </Button>
         
-        <Button Grid.Row="0" 
-                Grid.Column="2"
-                Theme="{StaticResource ActionButton}"
-                Width="250" Click="Disconnect">
+        <Button Grid.Row="0" Grid.Column="2" Theme="{StaticResource ActionButton}" Width="250" Click="Disconnect">
             <Button.Content>
                 <Grid RowDefinitions="*"
                       ColumnDefinitions="30, 200">
