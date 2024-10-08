@@ -7,4 +7,52 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
+    <Application.Resources>
+        <FontFamily x:Key="GreatVibesFont">avares://Assets/Fonts#Great Vibes</FontFamily>
+        
+        <ControlTheme x:Key="ActionButton" TargetType="Button">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontFamily" Value="Raleway"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="CornerRadius" Value="2"/>
+            <Setter Property="Background" Value="#E63946"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            
+            <Style Selector="^:pointerover">
+                <Setter Property="Background" Value="#E00011"/>
+            </Style>
+        </ControlTheme>
+        
+        <ControlTheme x:Key="InputLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+        </ControlTheme>
+        
+        <ControlTheme x:Key="Link" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            
+            <Style Selector="^:pointerover">
+                <Setter Property="TextDecorations" Value="Underline"/>
+            </Style>
+        </ControlTheme>
+        
+        <ControlTheme x:Key="InputField" TargetType="TextBox">
+            <Setter Property="Watermark" Value="Mot de passe"/>
+            <Setter Property="PasswordChar" Value="*"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="#1C1C1C"/>
+            <Setter Property="Background" Value="White"/>
+            <Style Selector="^:pointerover">
+                <Setter Property="Foreground" Value="#1C1C1C"/>
+                <Setter Property="Background" Value="White"/>
+            </Style>
+        </ControlTheme>
+        
+    </Application.Resources>
 </Application>
