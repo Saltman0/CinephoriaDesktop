@@ -5,9 +5,9 @@ using CinephoriaDesktop.Views.Error;
 
 namespace CinephoriaDesktop.Views.Login;
 
-public partial class LoginWindow : Window
+public partial class LoginControl : UserControl
 {
-    public LoginWindow()
+    public LoginControl()
     {
         InitializeComponent();
     }
@@ -17,14 +17,14 @@ public partial class LoginWindow : Window
         if (string.IsNullOrEmpty(EmailTextBox.Text) || string.IsNullOrEmpty(PasswordTextBox.Text))
         {
             EmptyCredentialsErrorWindow errorWindow = new EmptyCredentialsErrorWindow();
-            errorWindow.ShowDialog(this);
+            errorWindow.ShowDialog(TopLevel.GetTopLevel(this) as Window);
         }
         else
         {
             if (!AuthentificationService.Authenticate(EmailTextBox.Text, PasswordTextBox.Text))
             {
                 WrongCredentialsErrorWindow wrongCredentialsErrorWindow = new WrongCredentialsErrorWindow();
-                wrongCredentialsErrorWindow.ShowDialog(this);
+                wrongCredentialsErrorWindow.ShowDialog(TopLevel.GetTopLevel(this) as Window);
             }
         }
         
