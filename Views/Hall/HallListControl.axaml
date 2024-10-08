@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:header="clr-namespace:CinephoriaDesktop.Views"
+             xmlns:halls="clr-namespace:CinephoriaDesktop.Views.Hall"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="832" Width="1280" Height="832"
+             x:Class="CinephoriaDesktop.Views.Hall.HallListControl">
+    
+    <StackPanel>
+        
+        <header:HeaderControl></header:HeaderControl>
+    
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <halls:HallControl/>
+            <halls:HallControl/>
+            <halls:HallControl/>
+            <halls:HallControl/>
+            <halls:HallControl/>
+            <halls:HallControl/>
+        </WrapPanel>
+        
+    </StackPanel>
+    
+    
+</UserControl>
