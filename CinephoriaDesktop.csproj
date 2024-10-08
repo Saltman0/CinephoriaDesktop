@@ -22,13 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="Views\Login\LoginWindow.axaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Views\Error\WrongCredentialsErrorWindow.cs">
       <SubType>Code</SubType>
       <DependentUpon>WrongCredentialsErrorWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HeaderControl.axaml.cs">
+      <DependentUpon>HeaderControl.axaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
 </Project>
