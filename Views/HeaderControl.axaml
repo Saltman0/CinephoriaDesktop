@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="100" 
+             Width="1280" Height="100"
+             x:Class="CinephoriaDesktop.Views.HeaderControl"
+             Background="#1C1C1C">
+    
+    <Grid RowDefinitions="*"
+          ColumnDefinitions="*, Auto, Auto"
+          Margin="15">
+        
+        <TextBlock Grid.Row="0" 
+                   Grid.Column="0"
+                   Text="Bienvenue Prénom NOM"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"/>
+        
+        <Button Grid.Row="0" 
+                Grid.Column="1"
+                Margin="0, 0, 10, 0"
+                Theme="{StaticResource ActionButton}"
+                Width="270">
+            <Button.Content>
+                <Grid RowDefinitions="*"
+                      ColumnDefinitions="50, 220">
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           Source="../../Assets/Images/Danger.png"
+                           Width="35"
+                           Height="35" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                    <TextBlock Grid.Row="0" 
+                               Grid.Column="1" 
+                               Text="Signaler un incident" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Grid>
+            </Button.Content>
+        </Button>
+        
+        <Button Grid.Row="0" 
+                Grid.Column="2"
+                Theme="{StaticResource ActionButton}"
+                Width="250">
+            <Button.Content>
+                <Grid RowDefinitions="*"
+                      ColumnDefinitions="30, 200">
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           Source="../../Assets/Images/Power.png"
+                           Width="35"
+                           Height="35" 
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                    <TextBlock Grid.Row="0" 
+                               Grid.Column="1" 
+                               Text="Se déconnecter" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Grid>
+            </Button.Content>
+        </Button>
+        
+    </Grid>
+    
+</UserControl>
