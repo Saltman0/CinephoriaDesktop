@@ -15,6 +15,7 @@ public partial class IncidentReportWindow : Window
     {
         // TODO Valider et envoyer une requête au serveur contenant les différentes informations pour l'enregistrer
         Console.WriteLine("Submitting Incident");
+        Close();
     }
 
     private void CloseWindow(object? sender, RoutedEventArgs e)
