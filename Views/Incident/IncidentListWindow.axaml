@@ -1,0 +1,49 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:incident="clr-namespace:CinephoriaDesktop.Views.Incident"
+        mc:Ignorable="d" d:DesignWidth="550" d:DesignHeight="550" Width="550" Height="550" CanResize="False"
+        x:Class="CinephoriaDesktop.Views.Incident.IncidentListWindow"
+        Title="Liste des incidents" 
+        Background="#1C1C1C">
+        
+        <StackPanel Orientation="Vertical" Spacing="10">
+                
+                <ScrollViewer Height="480" VerticalAlignment="Top">
+                        <StackPanel Orientation="Vertical">
+                
+                                <incident:IncidentControl></incident:IncidentControl>
+                                <incident:IncidentControl></incident:IncidentControl>
+                                <incident:IncidentControl></incident:IncidentControl>
+                                <incident:IncidentControl></incident:IncidentControl>
+                                <incident:IncidentControl></incident:IncidentControl>
+                
+                        </StackPanel> 
+                </ScrollViewer>
+                
+                <Button Theme="{StaticResource ActionButton}"
+                        Width="200" Click="CloseWindow">
+                        <Button.Content>
+                                <Grid RowDefinitions="*"
+                                      ColumnDefinitions="20, 140">
+                                        <Image Grid.Row="0"
+                                               Grid.Column="0"
+                                               Source="../../Assets/Images/Left_arrow.png"
+                                               Width="35"
+                                               Height="35" 
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Row="0" Grid.Column="1" 
+                                                   HorizontalAlignment="Center" 
+                                                   VerticalAlignment="Center">
+                                                Retour
+                                        </TextBlock>
+                                </Grid>
+                        </Button.Content>
+                </Button>
+                
+        </StackPanel>
+        
+        
+</Window>
