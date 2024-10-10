@@ -1,0 +1,40 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="550" d:DesignHeight="160" Width="550" Height="160" 
+             Background="#1C1C1C" BorderThickness="0, 2, 0, 2" BorderBrush="#F1C40F"
+             x:Class="CinephoriaDesktop.Views.Incident.IncidentControl">
+    
+    <StackPanel Orientation="Vertical" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        
+        <TextBlock Theme="{StaticResource Header}">
+            Type d'incident
+        </TextBlock>
+        
+        <StackPanel Orientation="Horizontal" Spacing="20">
+            
+            <StackPanel Orientation="Vertical" Spacing="10">
+            
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <Image Source="../../Assets/Images/Calendar.png" Width="25" Height="25"></Image>
+                    <TextBlock Theme="{StaticResource BigText}">DD/MM/YYYY</TextBlock>
+                </StackPanel>
+        
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <Image Source="../../Assets/Images/Clock.png" Width="25" Height="25"></Image>
+                    <TextBlock Theme="{StaticResource BigText}">xxhxx</TextBlock>
+                </StackPanel>
+            
+            </StackPanel>
+            
+            <TextBlock Theme="{StaticResource MainText}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Siège A2 cassé, nécessite une intervention <LineBreak/>de notre technicien. Problème à régler <LineBreak />en urgence.
+            </TextBlock>
+            
+        </StackPanel>
+        
+        
+    </StackPanel>
+    
+</UserControl>
