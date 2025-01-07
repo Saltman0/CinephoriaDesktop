@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="550" d:DesignHeight="550" Width="550" Height="550" CanResize="False"
+        x:Class="CinephoriaDesktop.Views.Incident.IncidentReportWindow"
+        Title="Signaler un incident" 
+        Background="#1C1C1C">
+    
+    <StackPanel Orientation="Vertical" Spacing="50" VerticalAlignment="Center">
+        
+        <StackPanel Orientation="Vertical" Spacing="5" HorizontalAlignment="Center">
+            
+            <Label Theme="{StaticResource InputLabel}">Type d'incident</Label>
+            <!-- TODO Charger dynamiquement les types d'incident depuis la base de données -->
+            <ComboBox SelectedIndex="0" MaxDropDownHeight="100" Width="300">
+                <ComboBoxItem>Technique</ComboBoxItem>
+                <ComboBoxItem>Sécurité</ComboBoxItem>
+                <ComboBoxItem>Propreté</ComboBoxItem>
+            </ComboBox>
+            
+        </StackPanel>
+    
+        <StackPanel Orientation="Vertical" Spacing="5" HorizontalAlignment="Center">
+            
+            <Label Theme="{StaticResource InputLabel}">Description</Label>
+            <TextBox Width="455" Height="200"></TextBox>
+            
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Spacing="50" HorizontalAlignment="Center">
+            
+            <Button Theme="{StaticResource ActionButton}"
+                    Width="200" Click="SubmitIncident">
+                <Button.Content>
+                    <Grid RowDefinitions="*"
+                          ColumnDefinitions="20, 140">
+                        <Image Grid.Row="0"
+                               Grid.Column="0"
+                               Source="../../Assets/Images/Pencil.png"
+                               Width="35"
+                               Height="35" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   Text="Enregistrer" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </Button.Content>
+            </Button>
+            
+            <Button Theme="{StaticResource ActionButton}"
+                    Width="200" Click="CloseWindow">
+                <Button.Content>
+                    <Grid RowDefinitions="*"
+                          ColumnDefinitions="20, 140">
+                        <Image Grid.Row="0"
+                               Grid.Column="0"
+                               Source="../../Assets/Images/Left_arrow.png"
+                               Width="35"
+                               Height="35" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="0" 
+                                   Grid.Column="1" 
+                                   Text="Retour" 
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Grid>
+                </Button.Content>
+            </Button>
+            
+        </StackPanel>
+    </StackPanel>
+</Window>
