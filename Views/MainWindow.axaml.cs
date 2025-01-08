@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using CinephoriaDesktop.Services;
 using CinephoriaDesktop.Views.Login;
 
 namespace CinephoriaDesktop.Views;
@@ -8,11 +9,11 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        //ShowLoginView();
+        ShowLoginView();
     }
     
-    /*private void ShowLoginView()
+    private void ShowLoginView()
     {
-        Content = new LoginControl();
-    }*/
+        Content = new LoginControl(new ApiService());
+    }
 }
