@@ -1,23 +1,14 @@
 using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using CinephoriaDesktop.Factory;
 
 namespace CinephoriaDesktop.Services;
 
-public class ApiService : IApiService
+public static class ApiService
 {
-    private HttpClient _httpClient;
-
-    public ApiService()
-    {
-        _httpClient = new HttpClient();
-        _httpClient.BaseAddress = new Uri("http://172.18.0.6");
-        _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-    }
-    
-    public string Authenticate(string email, string password)
+    public static string Authenticate(string baseAddress, string email, string password)
     {
         Console.WriteLine("Authenticating... with "+email+" and password "+password);
 
@@ -27,7 +18,7 @@ public class ApiService : IApiService
                 JsonSerializer.Serialize(new { email, password }), Encoding.UTF8, "application/json"
             );
 
-            HttpResponseMessage response = _httpClient.PostAsync("/login", content).Result;
+            HttpResponseMessage response = HttpClientFactory.Create(baseAddress).PostAsync("/login", content).Result;
 
             if (response.IsSuccessStatusCode)
             {
