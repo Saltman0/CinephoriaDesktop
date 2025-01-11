@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using CinephoriaDesktop.Services;
 using CinephoriaDesktop.Views.Login;
@@ -10,10 +11,20 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         ShowLoginView();
+        Closed += MainWindowClosed;
     }
     
     private void ShowLoginView()
     {
-        Content = new LoginControl(new ApiService());
+        Content = new LoginControl();
+    }
+
+    public void MainWindowClosed(object? sender, EventArgs e)
+    {
+        Console.WriteLine("MainWindow Closed");
+
+        bool isDatabaseDeleted = DatabaseService.DeleteDatabase("/home/saltman/Documents/Test/CinephoriaDesktop.db");
+
+        Console.WriteLine(isDatabaseDeleted ? "Database deleted." : "Database not deleted.");
     }
 }
