@@ -1,8 +1,5 @@
 ﻿using Avalonia;
 using System;
-using CinephoriaDesktop.Services;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace CinephoriaDesktop;
 
@@ -14,12 +11,6 @@ class Program
     [STAThread]
     public static void Main(string[] args)
     {
-        HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
-
-        builder.Services.AddTransient<IApiService, ApiService>();
-        
-        using IHost host = builder.Build();
-        
         BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
     }
 
