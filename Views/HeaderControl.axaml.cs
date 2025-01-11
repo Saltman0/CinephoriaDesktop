@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using CinephoriaDesktop.Services;
 using CinephoriaDesktop.Views.Incident;
 using CinephoriaDesktop.Views.Login;
 
@@ -20,7 +21,10 @@ public partial class HeaderControl : UserControl
 
     private void Disconnect(object? sender, RoutedEventArgs e)
     {
+        DatabaseService.DeleteDatabase("/home/saltman/Documents/Test/CinephoriaDesktop.db");
+        
         var topLevel = TopLevel.GetTopLevel(this) as Window;
+        
         if (topLevel != null) topLevel.Content = new LoginControl();
     }
 }
