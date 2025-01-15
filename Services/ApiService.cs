@@ -65,7 +65,7 @@ public static class ApiService
                     }
                 }
 
-                HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, null).GetAsync("/user"+userId).Result;
+                HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, jwtToken).GetAsync("/user/"+userId).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -162,7 +162,7 @@ public static class ApiService
 
         try
         {
-            HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, jwtToken).GetAsync("cinema/"+cinemaId+"/hall").Result;
+            HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, jwtToken).GetAsync("/cinema/"+cinemaId+"/hall").Result;
 
             if (response.IsSuccessStatusCode)
             {
@@ -186,7 +186,7 @@ public static class ApiService
 
         try
         {
-            HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, jwtToken).GetAsync("hall/"+hallId+"/incident").Result;
+            HttpResponseMessage response = HttpClientFactory.Create(BaseAddress, jwtToken).GetAsync("/hall/"+hallId+"/incident").Result;
 
             if (response.IsSuccessStatusCode)
             {
