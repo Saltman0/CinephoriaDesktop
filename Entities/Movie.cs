@@ -6,12 +6,12 @@ public class Movie
 {
     private string _title;
     private string _description;
-    private int _minimumAge;
+    private int? _minimumAge;
     private bool _favorite;
     private string _imageUrl;
     private int _categoryId;
 
-    public Movie(string title, string description, int minimumAge, bool favorite, string imageUrl, int categoryId)
+    public Movie(string title, string description, int? minimumAge, bool favorite, string imageUrl, int categoryId)
     {
         _title = title;
         _description = description;
@@ -33,7 +33,7 @@ public class Movie
         set => _description = value ?? throw new ArgumentNullException(nameof(value));
     }
 
-    public int MinimumAge
+    public int? MinimumAge
     {
         get => _minimumAge;
         set => _minimumAge = value;
